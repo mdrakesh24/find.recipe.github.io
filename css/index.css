@@ -1,19 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Tilt+Neon&family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 :root{
-    --tenne-tawny: #d65108;
-    --tenne-tawny-dark: #b54507;
+    --tenne-tawny: royalblue;
+    --tenne-tawny-dark: rgb(39, 75, 185);
 }
 body{
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
+}
+
+/* **************************Navbar*********************** */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+.logo {
+    font-family: "Anta", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 25px;
+    color: black;
+}
+
+.logo span{
+    color: royalblue;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0px 15px;
+}
+
+nav ul li a{
+    color: black;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+    color: royalblue;
+    transition: all ease-in-out 0.2s;
+}
+
+body{
+    line-height: 1.5;
 }
 
 .btn{
@@ -28,16 +84,21 @@ body{
 .title{
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.title span{
+    color: royalblue;
 }
 
 /* *************************Main Container********************** */
 .container{
-    min-height: 100vh;
+    min-height: 90vh;
 }
 .meal-wrapper{
     max-width: 1280px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem 2rem;
     background: #fff;
     text-align: center;
 }
@@ -261,6 +322,87 @@ body{
 }
 .recipe-link a:hover{
     opacity: 0.8;
+}
+
+/***********************Footer***********************/
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 20px 0px;
+    box-shadow: 0px 0px 5px grey;
+}
+
+footer h3, h4{
+    font-family: "Noto Sans", sans-serif;
+    color: royalblue;
+    font-weight: normal;
+}
+
+footer p{
+    color: rgba(0, 0, 0, 0.9);
+    font-family: "Noto Sans", sans-serif;
+    margin: 5px 0px;
+    padding: 0;
+    font-weight: normal;
+}
+
+footer ul li a{
+    color: rgba(0, 0, 0, 0.9);
+    font-family: "Noto Sans", sans-serif;
+    font-weight: normal;
+}
+
+footer ul li a:hover{
+    text-decoration: underline;
+}
+
+footer ul li{
+    margin: 5px 0px;
+}
+
+
+
+/* ************************Responsive************************** */
+
+@media screen and (max-width:400px) {
+    h1{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    footer{
+        flex-wrap: wrap;
+    }
+    footer ul{
+        margin: 0px 10px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    nav{
+        flex-direction: column;
+    }
+    nav .logo{
+        margin-bottom: 10px;
+    }
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer ul{
+        margin: 0;
+        padding: 0;
+    }
+    footer div, ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0px;
+    }
 }
 
 /* ***********************Not Found********************** */
